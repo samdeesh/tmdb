@@ -1,0 +1,6 @@
+<div class="row">
+    <a class="btn btn-primary pull-right" ng-click="search.sort=!search.sort">Sort {{search.sort?"Asc":"Desc"}}</a>
+</div>
+<div class="media-list">
+    <result ng-repeat="result in search.response.data.results|  limitTo :10 |orderBy:id :search.sort"></result>
+</div>
